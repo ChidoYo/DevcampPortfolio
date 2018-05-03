@@ -23,8 +23,7 @@ class PortfoliosController < ApplicationController
     @portfolio_item = Portfolio.find(params[:id])
   end
 
-  # PATCH/PUT /blogs/1
-  # PATCH/PUT /blogs/1.json
+  # PATCH/PUT /portfolios/1
   def update
     @portfolio_item = Portfolio.find(params[:id])
 
@@ -35,5 +34,9 @@ class PortfoliosController < ApplicationController
         format.html { render :edit }
       end
     end
+  end
+
+  def show
+    @portfolio_item = Portfolio.find(params[:id])
   end
 end
